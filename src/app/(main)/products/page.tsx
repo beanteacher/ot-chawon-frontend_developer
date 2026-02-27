@@ -1,4 +1,5 @@
 import { getProducts } from '@/services/product/get-products';
+import { formatPrice } from '@/lib/utils/price';
 
 export default async function ProductsPage() {
   try {
@@ -18,7 +19,7 @@ export default async function ProductsPage() {
         <h1>Products</h1>
         <ul>
           {items.map((item) => (
-            <li key={item.id}>{item.name} - {item.price}</li>
+            <li key={item.id}>{item.name} - {formatPrice(item.price)}</li>
           ))}
         </ul>
       </main>
