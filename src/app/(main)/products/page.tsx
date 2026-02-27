@@ -1,3 +1,4 @@
+import { ProductError } from '@/components/features/product/states/ProductError';
 import { ProductList } from '@/components/features/product/ProductList';
 import { getProducts } from '@/services/product/get-products';
 
@@ -14,7 +15,7 @@ export default async function ProductsPage() {
     return (
       <main>
         <h1>Products</h1>
-        <p>Failed to load products.</p>
+        <ProductError />
       </main>
     );
   }

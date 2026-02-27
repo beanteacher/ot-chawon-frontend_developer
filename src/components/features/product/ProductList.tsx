@@ -1,4 +1,5 @@
 import { ProductItem } from './ProductItem';
+import { ProductEmpty } from './states/ProductEmpty';
 
 interface Product {
   id: number;
@@ -12,7 +13,7 @@ interface ProductListProps {
 
 export function ProductList({ items }: ProductListProps) {
   if (items.length === 0) {
-    return <p>No products available.</p>;
+    return <ProductEmpty />;
   }
 
   return (
